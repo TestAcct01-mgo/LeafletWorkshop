@@ -68,22 +68,22 @@
                 d > 5000 ? '#fd8d3c' :
                 d > 2500 ? '#feb24c' :
                 d > 1 ? '#fed976' :
-                        '#FFFFFF';
+                        '#525252';         
         
     }
     
-    
-	
-	// Style polygons with orange border and light orange fill
+    	
+	// Style polygons with white border and fill based on the RES_CNT data breaks (defined in colourBreaks())
 	function polyStyle(feature) {
 		return {
 			weight: 1,
-			fillColor: colourBreaks(feature.properties.RES_CNT),
-			color: '#FFFFFF'
+			fillColor: colourBreaks(feature.properties.res_cnt),
+			color: '#FFFFFF',
+			opacity: 1,
+			fillOpacity: 1
 		};
 	}
 	
-  
     
     
     // ----------- BEGIN SECTION (Markers, circles, polygons, & popups) ------------- 
